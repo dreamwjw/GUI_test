@@ -13,8 +13,11 @@ private:
 
 private:
 	int Init();
-
+	void OnPrepare();
+	
 public:
+	void Notify(TNotifyUI& msg);
+	LPCTSTR GetWindowClassName() const { return _T("CMyGui"); };
 	LRESULT HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam);
 };
 
